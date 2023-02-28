@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function validateform2() {
+        var FNAME = document.myform2.fname.value;
+        var LNAME = document.myform2.lname.value;
+        var DATE = document.myform2.dob.value;
+        var GEN = document.myform2.gen.value;
+        if ((FNAME == '') && (LNAME == '') && (DATE == '') && (GEN == ''))
+         {
+            alert("no fields should be empty");
+            return false;
+        }
+        else {
+            document.write("THE FIRST NAME OF THE PERSON IS : " + FNAME + "<br>");
+            document.write("THE LAST NAME OF THE PERSON IS : " + LNAME + "<br>");
+            document.write("THE GENDER OF THE PERSON IS : " + GEN + "<br>");
+            var dob = new Date(DATE);
+            var dif = Date.now() - dob.getTime();
+            var daydiff = (dif / 31536000000).toFixed(0);
+            document.write(daydiff + "<br>");
+
+            if (daydiff > 18) {
+                document.write(FNAME + "  " + " IS ELIGIBLE TO VOTE THIS YEAR ");
+            }
+            else {
+                document.write(FNAME + " " + " IS NOT ELIGIBLE TO VOTE THIS YEAR ");
+            }
+
+
+        }
+    }
+</script>
+
+<body>
+    <form name="myform2" action="" method="post" onsubmit="return  validateform2()">
+        first Name: <input type="text" name="fname"><br />
+        last Name: <input type="text" name="lname"><br />
+        date of birth:<input type="date" name="dob"><br />
+        gender :<input type="radio" name="gen" value="male">male<br />
+        <input type="radio" name="gen" value="female">female<br />
+        <input type="submit" value="Sign In">
+    </form>
+</body>
+
+</html>

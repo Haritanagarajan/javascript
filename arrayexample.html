@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+</head>
+
+<body>
+    <button onclick="func()">friends</button>
+    <button onclick="func1()">push</button>
+    <button onclick="func2()">pop</button>
+    <button onclick="func3()">push2</button>
+    <button onclick="func4()">unshift</button>
+    <button onclick="func5()">shift</button>
+    <button onclick="func6()">join</button>
+    <button onclick="func7()">sort</button>
+    <button onclick="print1type()">for of loop</button>
+    <button onclick="print2type()">for in loop</button>
+    <script>
+        function func() {
+            const friends = ["hari", "Harishmitha", "yamini", "rani", "vasanth", "pavi"];
+            document.write(friends + "<br>");
+        }
+        function func1() {
+            const friends = ["hari", "Harishmitha", "yamini", "rani", "vasanth", "pavi"];
+            friends.push("uma");
+            document.write(friends + "<br>");
+        }
+        function func2() {
+            const friends = ["hari", "Harishmitha", "yamini", "rani", "vasanth", "pavi"];
+            friends.pop("uma");
+            document.write(friends + "<br>");
+        }
+        function func3() {
+            const friends = ["hari", "Harishmitha", "yamini", "rani", "vasanth", "pavi"];
+            friends.push("hema", "harsha");
+            document.write(friends + "<br>");
+        }
+        function func4() {
+            const friends = ["hari", "Harishmitha", "yamini", "rani", "vasanth", "pavi"];
+            friends.unshift("savitha", "kavitha");
+            document.write(friends + "<br>");
+        }
+        function func5() {
+            const friends = ["hari", "Harishmitha", "yamini", "rani", "vasanth", "pavi"];
+            friends.shift("hema", "harsha");
+            document.write(friends + "<br>");
+        }
+        function func6() {
+            const friends = ["hari", "Harishmitha", "yamini", "rani", "vasanth", "pavi"];
+            friends.join();
+            document.write(friends + "<br>");
+        }
+        function func7() {
+            const friends = ["hari", "Harishmitha", "yamini", "rani", "vasanth", "pavi"];
+            friends.sort();
+            document.write(friends + "<br>");
+        }
+        function print1type() {
+            const friends = ["hari", "Harishmitha", "yamini", "rani", "vasanth", "pavi"];
+            for (var fr of friends) {
+                document.write(fr + "<br>");
+            }
+        }
+        function print2type() {
+            const friends = ["hari", "Harishmitha", "yamini", "rani", "vasanth", "pavi"];
+            for (var i in friends) {
+                var j = i;
+                document.write("Friends [ " + (j) + " ] " + friends[i] + "<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>

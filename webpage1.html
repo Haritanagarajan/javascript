@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    </head>
+    <script>
+      function validateform()
+      {  
+      var inpName=document.myform.pname.value; 
+      var passwd=document.myform.pword.value; 
+      var cpasswd=document.myform.cpword.value;  
+       var pwd_expression = (/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/);
+        
+      if (inpName==null || inpName=="")
+      
+      {  
+        alert("Name can't be blank");  
+        return false;  
+      }
+       else if(!pwd_expression.test(passwd))
+             {
+                    alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+                     return false;
+              }
+      else if(cpasswd=='')
+              {
+                  alert('Enter Confirm Password');
+                  return false;
+             }
+             
+         else if(passwd != cpasswd)
+              {
+                   alert ('Password not Matched');
+                   return false;
+              }
+              
+               else if(passwd.length<6)
+          {  
+         alert("Password must be at least 8 to 15 characters long."); 
+          return false; 
+      
+         }
+         else if(passwd.length>=18)
+         {
+           alert("password is not within the length")
+           return false;
+         }
+       else {
+        document.write( "Valid User name and Password" );
+        window.location="http://127.0.0.1:5500/webpage2.html";
+      }  
+      }
+  </script>
+<body>
+    
+     <form name="myform" action="" method="post" onsubmit="return  validateform()" >  
+        Name: <input type="text" name="pname"><br/>  
+        Password: <input type="password" name="pword"><br/>  
+        Confirm Password: <input type="password" name="cpword"><br/>  
+         <input type="submit"  value="Sign In" > 
+         <!-- <script src="webpageex.js"></script> -->
+   </form>  
+</body>
+</html>
