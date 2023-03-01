@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+
+<body>
+    <script>
+        class person {
+            constructor(name, age, gender, address) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+                this.address = address;
+
+            }
+
+            disp() {
+
+            }
+        }
+        class person1 extends person {
+            constructor(name, age, gender, address,empcode, dept, desig, sal) {
+                super(name, age, gender, address);
+                this.empcode = empcode;
+                this.dept = dept;
+                this.desig = desig;
+                this.sal = sal;
+
+            }
+
+            disp() {
+                
+                document.write(("The details of the person is: " + (p1.name + "   " + p1.age + "  "+ p1.gender +"  " + p1.address + " " +p1.empcode + "   " + p1.dept + "  " + p1.desig + "  " + p1.sal)));
+            }
+        }
+        var p1 = new person1("hari",21,"female","cbe",12, "bsc", "hr", 10000);
+        p1.disp();
+    </script>
+</body>
+
+</html>
