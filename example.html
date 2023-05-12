@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//         //1
+//         var myObject = {
+//             foo: "bar",
+//             func: function () {
+//                 var self = this;
+//                 console.log("outer func:  this.foo = " + this.foo);
+//                 console.log("outer func:  self.foo = " + self.foo);
+//                 (function () {
+//                     console.log("inner func:  this.foo = " + this.foo);
+//                     console.log("inner func:  self.foo = " + self.foo);
+//                 }());
+//             }
+//         };
+//         myObject.func();
+//         //2
+//         (function var1() {
+//             var a = b = 4;
+
+//         })()//immediate function invoke expression
+
+//         console.log("a defined? " + (typeof a !== 'undefined'))
+//         console.log("b defined? " + (typeof b !== 'undefined'))
+//         //3
+//         var bar = null//true for null & array
+//         console.log(typeof bar === "object")
+//         //4
+//         let obj = {
+//             a: 1,
+//             b: 2,
+//             c: {
+//                 age: 30
+//             }
+//         };
+
+//         var objclone = Object.assign({}, obj);
+//         console.log('objclone: ', objclone);
+
+//         obj.c.age = 45;
+//         console.log('After Change - obj: ', obj);           // 45 - This also changes
+//         console.log('After Change - objclone: ', objclone);
+//         //5
+//         function isInteger(x) { return (x ^ 0) === x; } 
+//         function isInteger(x) { return Math.round(x) === x; }
+//         function isInteger(x) { return parseInt(x, 10) === x; }
+//         function isInteger(x) { return parseInt(x, 10) === x; }
+//         //6
+//         var b = 1;
+// function outer(){
+//    	var b = 2
+//     function inner(){
+//         b++;
+//         var b = 3;
+//         console.log(b)
+//     }
+//     inner();
+// }
+// outer();
+//7
+// for (var i = 0; i < 5; i++) {
+// 	setTimeout(function() 
+//     { console.log(i); 
+//     }, i * 1000 );
+// }
+//8
+// var length = 19;
+// function fn() {
+// 	console.log(this.length);
+// }
+
+//  var obj = {
+//  length: 5,
+//    method: function(fn) {
+//     fn();
+//      arguments[0]();
+//    }
+//  };
+
+//  obj.method(fn, 1);
+ //9
+//  (function () {
+//     try {
+//         throw new Error();
+//     } catch (x) {
+//         var x = 1, y = 2;
+//         console.log(x);
+//     }
+//     console.log(x);
+//     console.log(y);
+// })();
+//10
+// var x = 21;
+// var girl = function () {
+//     console.log(x);
+//     var x = 20;
+// };
+// girl ();
+// //11
+// console.log(1 < 2 < 3);
+// console.log(3 > 2 > 1);
+//12
+// var hero = {
+//     _name: 'John Doe',
+//     getSecretIdentity: function (){
+//         return this._name;
+//     }
+// };
+
+// var stoleSecretIdentity = hero.getSecretIdentity;
+
+// console.log(stoleSecretIdentity());
+// console.log(hero.getSecretIdentity());
+//13
+// (function(x) {
+//     return (function(y) {
+//         console.log(x);
+//     })(2)
+// })(1);
+//14
+// function foo1()
+// {
+//   return {
+//       bar: "hello"
+//   };
+// }
+
+// console.log(foo1());
+// function foo2()
+// {
+//   return
+//   {
+//       bar: "hello"
+//   };
+// }
+// console.log(foo2());
+
+// function fullName() {
+//   return "Hello, this is " + this.first + " " + this.last;
+// }
+
+// // => Hello this is undefined undefined
+
+// // create a person object and pass its values to the fullName function
+// var person = {first: "Foo", last: "Bar"};
+// console.log(fullName()); 
+// fullName(); // => Hello this is Foo Bar
+    </script>
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Difference between display:"none"; and visibility: "hidden";
+    </title>
+</head>
+  
+<body>
+    <center>
+        <h1 style="color:green;">
+            GeeksforGeeks
+        </h1>
+        <h3>
+            display:"none"; and
+            visibility: "hidden";
+        </h3>
+        <div class="display">
+            <b>
+                display:
+                <span style="display:none">
+                    display:none</span> "none";
+            </b>
+        </div>
+        <br>
+        <div class="visibility">
+            <b>
+                visibility:
+                <span style="visibility:hidden">
+                    visibility:hidden
+                </span> "hidden";
+            </b>
+        </div>
+        <p>
+            You can see that the display: "none"; 
+            don't have any blank space and 
+            visibility: "hidden": has the blank space.
+        </p>
+  
+    </center>
+</body>
+</html>
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <style>
+        #form {
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+    <script>
+        function validate() {
+            var name = document.practice.fullname.value;
+            var date = document.practice.dob.value;
+            var pword = document.practice.password.value;
+            var cpword = document.practice.confirmpassword.value;
+            var passwordexp = /^[A-Z]{5,6}$/;
+
+            if (name = "") {
+                alert("name should not be empty");
+                return false;
+            }
+            else if (!passwordexp.test(pword)) {
+                alert("enter the correct password pattern");
+                return false;
+            }
+            else if (cpword != pword) {
+                alert("enter the corRect password");
+                return false;
+            }
+
+            else {
+                disp(name,pword, cpword, date);
+                alert("registration form successfully registered");
+                var dob = new Date(date);
+                var dif = Date.now() - dob.getTime();
+                var daydiff = (dif / 31536000000).toFixed(0);
+                // document.write(daydiff + "<br>");
+                if (daydiff > 18)
+                    alert("eleigible to vote")
+                else
+                    alert("not eligible");
+            }
+
+        }
+
+
+
+        function disp(name, pword, cpword, daydiff) {
+            document.write("name:" + name + "<br>");
+            document.write("password:" + pword + "<br>");
+            document.write("confirmpassword:" + cpword + "<br>");
+            document.write("AGE:" + daydiff + "<br>");
+
+        }
+    </script>
+</head>
+
+<body>
+    <h2>REGISTRATION FORM</h2>
+    <form id="form" name="practice" action="" onsubmit="return validate()">
+        name:<input type="text" name="fullname" placeholder="fullname"><br>
+        password:<input type="password" name="password" placeholder="password"><br>
+        confirm password<input type="password" name="confirmpassword" placeholder="reenter same password"><br>
+        DATE:<input type="date" name="dob" placeholder="date">
+        submit:<input type="submit" name="submit">
+    </form>
+</body>
+
+</html>

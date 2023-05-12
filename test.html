@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            var password= document.getElementById("pass").value;
+            var check = /^[a-z]{5,6}$/;
+
+            if(!check.test(password)){
+                alert("hshsa");
+                return false;
+            }else{
+                alert("hehe");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="password" name="" id="pass">
+    <button type="button" onclick="check()">hai</button>
+</body>
+</html>
